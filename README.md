@@ -8,6 +8,6 @@
 - Execute também o comando `npm install http express debug` pra instalar os pacotes básicos para desenvolvimento web.
 - Para executar a API apenas execute o comando `node .\bin\server.js` ou apenas execute `npm start` (script armazenado no package.json)
 
-## Nodemon (dev)
-- Foi instalado como devDependencies o pacote `nodemon`, para que nossa API atualize em tempo de execução conforme alteramos a mesma.
-	- Comando para instalação do mesmo em dev: `npm install nodemon --save-dev`
+## Depêndencias (npm installs)
+- Package `nodemon` (apenas para dev), para que a API atualize em tempo de execução conforme alteramos a mesma.
+	- `npm install nodemon --save-dev`
