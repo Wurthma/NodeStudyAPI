@@ -11,3 +11,4 @@
 ## Depêndencias (npm installs)
 - Package `nodemon` (apenas para dev), para que a API atualize em tempo de execução conforme alteramos a mesma.
 	- `npm install nodemon --save-dev`
+	- Para executar o nodemon execute: `nodemon .\bin\server.js`

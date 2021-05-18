@@ -13,6 +13,7 @@ const productsRoute = require('./routes/product-route')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Rotas
 app.use("/", indexRoute);
 app.use("/products", productsRoute);
 
