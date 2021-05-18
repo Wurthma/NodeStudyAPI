@@ -12,3 +12,13 @@
 - Package `nodemon` (apenas para dev), para que a API atualize em tempo de execução conforme alteramos a mesma.
 	- `npm install nodemon --save-dev`
 	- Para executar o nodemon execute: `nodemon .\bin\server.js`
+- Package `mongoose` para conexão com o MongoDB
+	- `npm install mongoose --save`
+
+## Banco de Dados - MongoDB e Docker
+- A aplicação faz uso do MongoDB com docker. Para installar a versão mais recente do mongodb com docker (latest) use o comando:
+	- `docker pull mongo`
+- Para criar um container chamado mongodb, execute o comando abaixo `MONGO_INITDB_ROOT_USERNAME` e `MONGO_INITDB_ROOT_PASSWORD` para o usuário e senha desejado.
+	- `docker run --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=dbuser -e MONGO_INITDB_ROOT_PASSWORD=myPassword mongo`
+	- Comando pra parar a execução: `docker stop mongodb`
+	- Para iniciar novamente o mesmo container: `docker start mongodb`

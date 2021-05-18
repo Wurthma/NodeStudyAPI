@@ -2,7 +2,7 @@
 
 const express = require("express");
 const app = express();
-const router = express.Router();
+const mongoose = require('mongoose');
 
 //Carregar rotas
 const indexRoute = require('./routes/index-route')
@@ -13,7 +13,10 @@ const productsRoute = require('./routes/product-route')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Rotas
+// Conectar ao MongoDB
+mongoose.connect('mongodb://wurthmann:5777308@localhost:27017/ndstr?authSource=admin', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Carregar rotas
 app.use("/", indexRoute);
 app.use("/products", productsRoute);
 
