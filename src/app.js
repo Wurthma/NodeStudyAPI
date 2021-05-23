@@ -4,6 +4,9 @@ const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
 
+//Carregar os Models
+const Product = require('./models/product');
+
 //Carregar rotas
 const indexRoute = require('./routes/index-route')
 const productsRoute = require('./routes/product-route')
