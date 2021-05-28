@@ -16,6 +16,20 @@ exports.get = (req, res, next) => {
     });
 }
 
+exports.getBySlug = (req, res, next) => {
+  Product
+    .findOne({
+      slug: req.params.slug,
+      active: true
+    }, 
+      'title description price slug tags')
+    .then(data => {
+      res.status(200).send(data);
+    }).catch(e => {
+      res.status(400).send(e);
+    });
+}
+
 exports.getById = (req, res, next) => {
   Product
     .findById(req.params.id)
@@ -26,10 +40,10 @@ exports.getById = (req, res, next) => {
     });
 }
 
-exports.getBySlug = (req, res, next) => {
+exports.getByTag = (req, res, next) => {
   Product
-    .findOne({
-      slug: req.params.slug,
+    .find({
+      tags: req.params.tag,
       active: true
     }, 
       'title description price slug tags')
