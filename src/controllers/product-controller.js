@@ -16,6 +16,16 @@ exports.get = (req, res, next) => {
     });
 }
 
+exports.getById = (req, res, next) => {
+  Product
+    .findById(req.params.id)
+    .then(data => {
+      res.status(200).send(data);
+    }).catch(e => {
+      res.status(400).send(e);
+    });
+}
+
 exports.getBySlug = (req, res, next) => {
   Product
     .findOne({
@@ -38,7 +48,6 @@ exports.post = (req, res, next) => {
   }).catch(e => {
     res.status(400).send({message: 'Falha ao cadastrar o produto.', data: e});
   });
-  
 };
 
 exports.put = (req, res, next) => {
