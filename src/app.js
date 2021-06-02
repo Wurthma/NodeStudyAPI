@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 //Carregar os Models
 const Product = require('./models/product');
 const Costumer = require('./models/customer');
+const Order = require('./models/order');
 
 //Carregar rotas
 const indexRoute = require('./routes/index-route')
