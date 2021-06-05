@@ -14,6 +14,8 @@
 	- Para executar o nodemon execute: `nodemon .\bin\server.js`
 - Package `mongoose` para conexão com o MongoDB
 	- `npm install mongoose --save`
+- Package uuid para geração de GUIDs:
+	- `npm install uuid --save`
 
 ## Banco de Dados - MongoDB e Docker
 - A aplicação faz uso do MongoDB com docker. Para installar a versão mais recente do mongodb com docker (latest) use o comando:
