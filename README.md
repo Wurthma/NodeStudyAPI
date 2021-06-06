@@ -16,6 +16,8 @@
 	- `npm install mongoose --save`
 - Package uuid para geração de GUIDs:
 	- `npm install uuid --save`
+- Package md5 para criptografia de senha de usuários:
+	- `npm install md5 --save`
 
 ## Banco de Dados - MongoDB e Docker
 - A aplicação faz uso do MongoDB com docker. Para installar a versão mais recente do mongodb com docker (latest) use o comando:
