@@ -1,7 +1,6 @@
 
 # Conceitos básicos NodeJS
 
-  
 ## Criando um projeto
 - Para iniciar um projeto apenas execute `npm init -y`
 	- O parâmetro `-y` evitará as perguntas e criará o arquivo `package.json` com as informações padrões do node. O arquivo pode ser alterado manualmente, se necessário.
@@ -18,6 +17,8 @@
 	- `npm install uuid --save`
 - Package md5 para criptografia de senha de usuários:
 	- `npm install md5 --save`
+- Package sendgrid/mail para envio de e-mails:
+	- `npm install --save @sendgrid/mail`
 
 ## Banco de Dados - MongoDB e Docker
 - A aplicação faz uso do MongoDB com docker. Para installar a versão mais recente do mongodb com docker (latest) use o comando:
@@ -26,3 +27,15 @@
 	- `docker run --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=dbuser -e MONGO_INITDB_ROOT_PASSWORD=myPassword mongo`
 	- Comando pra parar a execução: `docker stop mongodb`
 	- Para iniciar novamente o mesmo container: `docker start mongodb`
+
+## Dados sensíveis
+- Para o funcionamento correto da aplicação é necessário criar o arquivo secrets.js contendo os dados sensíveis usados pela aplicação. O arquivo deve conter as seguintes propriedades:
+
+```javascript
+module.exports = {
+    mongodbPassword: 'DbPassword',
+    sendgridKey: 'YOUR SEND GRID API KEY',
+    containerConnectionString: 'YOUR CONNECTION STRING',
+    saltKey: 'SOME GUID SALT KEY'
+}
+```
