@@ -19,6 +19,8 @@
 	- `npm install md5 --save`
 - Package sendgrid/mail para envio de e-mails:
 	- `npm install --save @sendgrid/mail`
+- Package JWT para envio autenticação:
+	- `npm install jsonwebtoken --save`
 
 ## Banco de Dados - MongoDB e Docker
 - A aplicação faz uso do MongoDB com docker. Para installar a versão mais recente do mongodb com docker (latest) use o comando:

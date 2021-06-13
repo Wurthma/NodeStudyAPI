@@ -19,3 +19,11 @@ exports.create = async(data) => {
         };
       }
 }
+
+exports.authenticate = async(data) => {
+  var res = await Customer.findOne({
+    email: data.email,
+    password: data.password
+  });
+  return res;
+}
