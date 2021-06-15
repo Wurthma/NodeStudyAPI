@@ -63,12 +63,13 @@ exports.post = async(req, res, next) => {
 
       if(!customer) {
         res.status(403).send({
-          message: 'Ussuário ou senha inválidos'
+          message: 'Usuário ou senha inválidos'
         });
         return;
       }
 
       const token = await authService.generateToken({
+        id: customer._id,
         email: req.body.email,
         name: customer.name
       })
