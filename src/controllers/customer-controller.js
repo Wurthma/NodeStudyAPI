@@ -74,8 +74,11 @@ exports.post = async(req, res, next) => {
       })
 
       res.status(201).send({
-        email: req.body.email,
-        name: customer.name
+        token: token,
+        data: {
+          email: req.body.email,
+          name: customer.name
+        }
       });
     } catch (e) {
       res.status(500).send({

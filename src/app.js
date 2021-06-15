@@ -13,7 +13,7 @@ const Order = require('./models/order');
 const indexRoute = require('./routes/index-route');
 const productsRoute = require('./routes/product-route');
 const customersRoute = require('./routes/customer-route');
-const ordersRoute = require('./routes/order.route');
+const ordersRoute = require('./routes/order-route');
 
 // Anteriormente era comum o uso do body-parser para converter o conteúdo do body para JSON, agora o express já faz esse trabalho
 // Mais informações: https://stackoverflow.com/a/59892173/5522115
