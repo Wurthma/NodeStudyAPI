@@ -43,6 +43,7 @@ exports.post = async (req, res, next) => {
       name: req.body.name,
       email: req.body.email,
       password: md5(req.body.password + global.SALT_KEY),
+      roles: ['user']
     });
 
     emailService.send(
@@ -78,6 +79,7 @@ exports.authenticate = async (req, res, next) => {
       id: customer._id,
       email: req.body.email,
       name: customer.name,
+      roles: customer.roles
     });
 
     res.status(201).send({
