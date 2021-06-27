@@ -3,6 +3,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
+const secrets = require('../secrets');
 
 //Carregar os Models
 const Product = require('./models/product');
@@ -28,7 +29,8 @@ app.use(function (req, res, next) {
     next();
 });
 // Conectar ao MongoDB
-mongoose.connect('mongodb://wurthmann:5777308@localhost:27017/ndstr?authSource=admin', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+const connectionString = `mongodb://${secrets.mongodbUser}:${secrets.mongodbPassword}@${secrets.mongodbHost}:${secrets.mongodbPort}/ndstr?authSource=admin`;
+mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 // Carregar rotas
 app.use("/", indexRoute);
