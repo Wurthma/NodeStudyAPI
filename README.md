@@ -35,9 +35,10 @@
 
 ```javascript
 module.exports = {
-    mongodbPassword: 'DbPassword',
-    sendgridKey: 'YOUR SEND GRID API KEY',
-    containerConnectionString: 'YOUR CONNECTION STRING',
+    mongodbUser: 'mongoDbUser',
+    mongodbPassword: 'mongoDbPassword',
+    mongodbHost: 'YouHost',
+    mongodbPort: '27017',
     saltKey: 'SOME GUID SALT KEY'
 }
 ```
