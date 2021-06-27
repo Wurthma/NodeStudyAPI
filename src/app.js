@@ -30,7 +30,12 @@ app.use(function (req, res, next) {
 });
 // Conectar ao MongoDB
 const connectionString = `mongodb://${secrets.mongodbUser}:${secrets.mongodbPassword}@${secrets.mongodbHost}:${secrets.mongodbPort}/ndstr?authSource=admin`;
-mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect(connectionString, { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true, 
+    useFindAndModify: false, 
+    useCreateIndex: true, 
+});
 
 // Carregar rotas
 app.use("/", indexRoute);
