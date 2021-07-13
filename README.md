@@ -31,7 +31,7 @@
 	- Para iniciar novamente o mesmo container: `docker start mongodb`
 
 ## Dados sensíveis
-- Para o funcionamento correto da aplicação é necessário criar o arquivo secrets.js contendo os dados sensíveis usados pela aplicação. O arquivo deve conter as seguintes propriedades:
+- Para o funcionamento correto da aplicação é necessário criar o arquivo secrets.js contendo os dados sensíveis usados pela aplicação. O arquivo deve conter as seguintes propriedades: 
 
 ```javascript
 module.exports = {
